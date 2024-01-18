@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div>
+    <button id="sample">jQuery</button>
+  </div>
+
+  <script>
+    $(function () {
+      $("button").click(function () {
+        console.log("クリックされました");
+      })
+      $("div").append("<button>EX0</button>");
+    })
+    $("div").append("<button>EX</button>");
+    
+    // Q
+    // 上記の説明で.on('click', function () {});と書きましたが、.onの部分を.clickと書いても同じ実行結果となります。
+    // .click(function () {});
+    //なぜ上記書き方で書かなかったのか調べて自分なりの言葉にしてまとめてください。
+
+    // A
+    // .click(function () {});と書いた場合、JQueryで後から追加した要素にはイベントを追加できず利便性に欠ける為。なお、clickメソッドはクリックイベントしか設定できないがonメソッドは複数のイベントを設定できる。
+    // ※mousemove(要素上でマウスが動かされたとき)、mouseover(要素にマウスが乗った時)等
+  </script>
+
+
+</body>
+
+</html>
